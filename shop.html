@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop All Catalog — KIVO</title>
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+<body id="shop">
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-track" id="announcementTrack">
+            <span>FREE WORLDWIDE SHIPPING ON ORDERS OVER $50</span>
+            <span>NEW SEASON — NOW AVAILABLE</span>
+            <span>10% OFF YOUR FIRST ORDER</span>
+            <span>EASY RETURNS WITHIN 30 DAYS</span>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo">
+            <a href="index.html">KIVO</a>
+        </div>
+
+        <input type="checkbox" id="toggler">
+        
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="shop.html" class="active">Shop</a>
+            <a href="collection.html">Collections</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <!-- Wishlist / Heart Icon -->
+            <a href="wishlist.html" class="icon-btn" aria-label="View Wishlist">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="#7A263A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+                <span class="badge" id="fav-count">0</span>
+            </a>
+
+            <!-- Shopping Bag Icon -->
+            <button class="icon-btn" id="open-cart" aria-label="View Shopping Cart">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="#7A263A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span class="badge" id="cart-count">0</span>
+            </button>
+
+            <!-- User Profile Icon -->
+            <a href="profile.html" class="icon-btn" id="open-profile" aria-label="View User Profile">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" stroke="#7A263A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </a>
+        </div>
+        <label for="toggler" class="fas fa-bars" aria-label="Toggle navigation menu"></label>
+    </header>
+
+    <!-- Main Catalog Area -->
+    <main class="shop-main">
+        
+        <!-- Shop Header & Categories Nav -->
+        <div class="shop-header-banner">
+            <h1>SHOP</h1>
+            <div class="shop-category-tabs">
+                <a href="shop.html" class="tab-btn active">All</a>
+                <a href="shop.html?cat=women" class="tab-btn">Women</a>
+                <a href="shop.html?cat=men" class="tab-btn">Men</a>
+                <a href="shop.html?cat=accessories" class="tab-btn">Accessories</a>
+            </div>
+        </div>
+
+        <hr class="shop-divider">
+
+        <!-- Controls Bar: Filters Toggle & Sorting -->
+        <div class="catalog-controls-bar">
+            <button class="filter-toggle-btn" popovertarget="filtersSidebar" popovertargetaction="toggle" id="toggleFilters">
+                <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 6H19M21 12H16M21 18H16M7 20V13.5612C7 13.3532 7 13.2492 6.97958 13.1497C6.96147 13.0615 6.93151 12.9761 6.89052 12.8958C6.84431 12.8054 6.77934 12.7242 6.64939 12.5617L3.35061 8.43826C3.22066 8.27583 3.15569 8.19461 3.10948 8.10417C3.06849 8.02393 3.03853 7.93852 3.02042 7.85026C3 7.75078 3 7.64677 3 7.43875V5.6C3 5.03995 3 4.75992 3.10899 4.54601C3.20487 4.35785 3.35785 4.20487 3.54601 4.10899C3.75992 4 4.03995 4 4.6 4H13.4C13.9601 4 14.2401 4 14.454 4.10899C14.6422 4.20487 14.7951 4.35785 14.891 4.54601C15 4.75992 15 5.03995 15 5.6V7.43875C15 7.64677 15 7.75078 14.9796 7.85026C14.9615 7.93852 14.9315 8.02393 14.8905 8.10417C14.8443 8.19461 14.7793 8.27583 14.6494 8.43826L11.3506 12.5617C11.2207 12.7242 11.1557 12.8054 11.1095 12.8958C11.0685 12.9761 11.0385 13.0615 11.0204 13.1497C11 13.2492 11 13.3532 11 13.5612V17L7 20Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg> Filters
+            </button>
+            <div>
+                <input type="search">
+                <svg width="40px" height="40px" viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 10.7655C5.50003 8.01511 7.44296 5.64777 10.1405 5.1113C12.8381 4.57483 15.539 6.01866 16.5913 8.55977C17.6437 11.1009 16.7544 14.0315 14.4674 15.5593C12.1804 17.0871 9.13257 16.7866 7.188 14.8415C6.10716 13.7604 5.49998 12.2942 5.5 10.7655Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17.029 16.5295L19.5 19.0005" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="sorting-container">
+                <label for="sortSelect">Sort:</label>
+                <select id="sortSelect" class="sort-dropdown">
+                    <option value="featured">Featured</option>
+                    <option value="newest">Newest</option>
+                    <option value="low-high">Price: Low → High</option>
+                    <option value="high-low">Price: High → Low</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Catalog Layout with Collapsible Sidebar Filters -->
+        <div class="catalog-layout">
+            
+            <!-- Filters Sidebar -->
+            <aside class="filters-sidebar" id="filtersSidebar" popover="auto">
+                <div class="sidebar-header">
+                    <h3>Refine By</h3>
+                </div>
+
+                <!-- Category Filter Group -->
+                <div class="filter-group">
+                    <h4>Category</h4>
+                    <label><input type="checkbox" name="cat" value="women"> Women's Apparel</label>
+                    <label><input type="checkbox" name="cat" value="men"> Men's Apparel</label>
+                    <label><input type="checkbox" name="cat" value="jewelry"> Fine Jewelry</label>
+                    <label><input type="checkbox" name="cat" value="accessories"> Accessories</label>
+                </div>
+
+                <!-- Size Filter Group -->
+                <div class="filter-group">
+                    <h4>Size</h4>
+                    <div class="size-options">
+                        <span class="size-chip">XS</span>
+                        <span class="size-chip">S</span>
+                        <span class="size-chip">M</span>
+                        <span class="size-chip">L</span>
+                        <span class="size-chip">XL</span>
+                    </div>
+                </div>
+
+                <!-- Color Filter Group -->
+                <div class="filter-group">
+                    <h4>Color</h4>
+                    <div class="color-options">
+                        <span class="color-dot" style="background-color: #7A263A;" title="Burgundy"></span>
+                        <span class="color-dot" style="background-color: #211D1B;" title="Black"></span>
+                        <span class="color-dot" style="background-color: #F7F2EA; border: 1px solid #DED5C9;" title="Cream"></span>
+                        <span class="color-dot" style="background-color: #4E5B4C;" title="Olive"></span>
+                        <span class="color-dot" style="background-color: #A83232;" title="Red"></span>
+                    </div>
+                </div>
+
+                <!-- Price Range Filter Group -->
+                <div class="filter-group">
+                    <h4>Price Range</h4>
+                    <div class="price-slider-container">
+                        <input type="range" min="0" max="150" value="150" id="priceRange">
+                        <div class="price-values">
+                            <span>$0</span>
+                            <span id="maxPriceLabel">$150</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Availability Filter Group -->
+                <div class="filter-group">
+                    <h4>Availability</h4>
+                    <label><input type="checkbox" name="avail" value="instock"> In Stock Only</label>
+                    <label><input type="checkbox" name="avail" value="sale"> On Sale / Special</label>
+                </div>
+
+                <button class="btn-primary-action apply-filters-btn">Apply Filters</button>
+            </aside>
+
+            <!-- Product Grid Area -->
+            <div class="catalog-grid-area">
+                <div class="product-grid" id="product-grid">
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    <!-- =========================
+        CART OVERLAY & DRAWER
+    ========================== -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+        <div class="cart-header">
+            <div>
+                <h2>Your Bag 🛍️</h2>
+                <span id="cartItemLabel">0 items</span>
+            </div>
+            <button type="button" id="closeCart" class="cart-close" aria-label="Close shopping bag">&times;</button>
+        </div>
+
+        <!-- CART CONTENT -->
+        <div class="cart-body" id="cartBody">
+
+            <!-- Dynamic cart items rendered by cart.js will go here -->
+
+            <!-- Empty State -->
+            <div class="cart-empty" id="cartEmpty">
+                <span class="empty-bag-icon">🛒</span>
+                <h3>Your bag is empty</h3>
+                <p>Looks like you haven't added anything to your cart yet.</p>
+                <a href="shop.html" class="cart-shop-btn">
+                    Continue Shopping ✨
+                </a>
+            </div>
+
+        </div>
+
+        <!-- CART FOOTER -->
+        <div class="cart-footer" id="cartFooter">
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <strong id="cartSubtotal">$0.00</strong>
+            </div>
+
+            <p class="cart-note">
+                Shipping and taxes calculated at checkout. 🚚
+            </p>
+
+            <button type="button" class="checkout-btn" id="checkoutBtn">
+                Proceed to Checkout
+            </button>
+
+            <button type="button" class="continue-shopping-btn" id="continueShopping">
+                Continue Shopping
+            </button>
+        </div>
+    </aside>
+   <!-- Footer Section -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>KIVO</h3>
+                <p>Your destination for signature artisan jewelry and chic independent fashion collections.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop Catalog</a>
+                <a href="collections.html">Collections</a>
+                <a href="about.html">About Brand</a>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Care</h4>
+                <a href="contact.html">Shipping & Returns</a>
+                <a href="contact.html">Size Guide</a>
+                <a href="contact.html">Track Order</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <p><i class="fa-solid fa-envelope"></i> support@kivofashion.com</p>
+                <p><i class="fa-solid fa-phone"></i> +1 (555) 382-9011</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/hazelworksng?utm_source=qr&igsh=MTEwMHdiNHZwM2lhMA==" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/message/XJLC6BAM5DPYN1" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/in/yetunde-undefined-35b78b425?utm_source=share_via&utm_content=profile&utm_medium=member_android" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 HAZEL. All Rights Reserved.</p>
+        </div>
+    </footer>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/wishlist.js"></script>
+<script src="js/shop.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

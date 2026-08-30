@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account | KIVO</title>
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body id="profile">
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-track" id="announcementTrack">
+            <span>FREE WORLDWIDE SHIPPING ON ORDERS OVER $50</span>
+            <span>NEW SEASON — NOW AVAILABLE</span>
+            <span>10% OFF YOUR FIRST ORDER</span>
+            <span>EASY RETURNS WITHIN 30 DAYS</span>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo">
+            <a href="index.html">KIVO</a>
+        </div>
+
+        <input type="checkbox" id="toggler">
+        
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="shop.html" class="active">Shop</a>
+            <a href="collection.html">Collections</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <!-- Wishlist / Heart Icon -->
+            <a href="wishlist.html" class="icon-btn" aria-label="View Wishlist">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="#7A263A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+                <span class="badge" id="fav-count">0</span>
+            </a>
+
+            <!-- Shopping Bag Icon -->
+            <button class="icon-btn" id="open-cart" aria-label="View Shopping Cart">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="#7A263A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span class="badge" id="cart-count">0</span>
+            </button>
+
+            <!-- User Profile Icon -->
+            <a href="profile.html" class="icon-btn" id="open-profile" aria-label="View User Profile">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" stroke="#7A263A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </a>
+        </div>
+        <label for="toggler" class="fas fa-bars" aria-label="Toggle navigation menu"></label>
+    </header>
+
+    <!-- =========================
+         MAIN ACCOUNT
+    ========================== -->
+
+    <main class="profile-main">
+
+        <!-- Page Heading -->
+
+        <section class="profile-heading">
+
+            <p class="profile-eyebrow">
+                KIVO ACCOUNT
+            </p>
+
+            <h1>
+                My Account
+            </h1>
+
+            <p>
+                Manage your profile, orders and saved pieces.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             ACCOUNT HERO
+        ========================== -->
+
+        <section class="account-hero">
+
+            <div class="account-avatar">
+                <i class="fa-regular fa-user"></i>
+            </div>
+
+            <div class="account-intro">
+
+                <p class="account-label">
+                    Welcome
+                </p>
+
+                <h2>
+                    Guest User
+                </h2>
+
+                <p>
+                    Sign in to save your details and access your
+                    account across your devices.
+                </p>
+
+            </div>
+
+            <div class="account-actions">
+
+                <a
+                    href="#"
+                    class="profile-primary-btn"
+                >
+                    Sign In
+                </a>
+
+                <a
+                    href="#"
+                    class="profile-secondary-btn"
+                >
+                    Create Account
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ACCOUNT CONTENT
+        ========================== -->
+
+        <section class="account-layout">
+
+
+            <!-- =====================
+                 SIDEBAR
+            ====================== -->
+
+            <aside class="account-sidebar">
+
+                <div class="account-menu">
+
+                    <p class="menu-title">
+                        Account
+                    </p>
+
+                    <a
+                        href="#overview"
+                        class="account-menu-link active"
+                    >
+                        <i class="fa-solid fa-grid-2"></i>
+                        Overview
+                    </a>
+
+                    <a
+                        href="#orders"
+                        class="account-menu-link"
+                    >
+                        <i class="fa-solid fa-box"></i>
+                        My Orders
+                    </a>
+
+                    <a
+                        href="wishlist.html"
+                        class="account-menu-link"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                        Wishlist
+
+                        <span id="profileWishlistCount">
+                            0
+                        </span>
+                    </a>
+
+                    <a
+                        href="#profile-details"
+                        class="account-menu-link"
+                    >
+                        <i class="fa-regular fa-user"></i>
+                        Profile
+                    </a>
+
+                    <a
+                        href="#settings"
+                        class="account-menu-link"
+                    >
+                        <i class="fa-solid fa-gear"></i>
+                        Settings
+                    </a>
+
+                </div>
+
+            </aside>
+
+
+            <!-- =====================
+                 DASHBOARD
+            ====================== -->
+
+            <div class="account-content" id="overview">
+                <div class="content-heading">
+                    <div>
+                        <p class="content-eyebrow">
+                            OVERVIEW
+                        </p>
+                        <h2>
+                            Your KIVO account
+                        </h2>
+                    </div>
+                </div>
+
+                <!-- =================
+                     STAT CARDS
+                ================== -->
+
+                <div class="account-stats">
+
+                    <a
+                        href="#orders"
+                        class="account-stat"
+                    >
+                        <span class="stat-icon">
+                            <i class="fa-solid fa-box"></i>
+                        </span>
+
+                        <span>
+                            <strong id="profileOrderCount">
+                                0
+                            </strong>
+
+                            <small>
+                                Orders
+                            </small>
+                        </span>
+                    </a>
+
+
+                    <a
+                        href="wishlist.html"
+                        class="account-stat"
+                    >
+                        <span class="stat-icon">
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+
+                        <span>
+                            <strong id="profileFavCount">
+                                0
+                            </strong>
+
+                            <small>
+                                Wishlist
+                            </small>
+                        </span>
+                    </a>
+
+
+                    <button
+                        type="button"
+                        class="account-stat"
+                        id="profileCartBtn"
+                    >
+                        <span class="stat-icon">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </span>
+
+                        <span>
+                            <strong id="profileCartCount">
+                                0
+                            </strong>
+
+                            <small>
+                                Bag Items
+                            </small>
+                        </span>
+                    </button>
+
+                </div>
+
+
+                <!-- =================
+                     QUICK ACTIONS
+                ================== -->
+
+                <section class="account-section">
+
+                    <div class="section-heading">
+
+                        <div>
+                            <p class="content-eyebrow">
+                                QUICK ACCESS
+                            </p>
+
+                            <h3>
+                                What would you like to do?
+                            </h3>
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-actions">
+
+                        <a
+                            href="shop.html"
+                            class="quick-action"
+                        >
+                            <i class="fa-solid fa-bag-shopping"></i>
+
+                            <span>
+                                <strong>
+                                    Continue Shopping
+                                </strong>
+
+                                <small>
+                                    Explore the latest KIVO pieces
+                                </small>
+                            </span>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+
+                        <a
+                            href="wishlist.html"
+                            class="quick-action"
+                        >
+                            <i class="fa-regular fa-heart"></i>
+
+                            <span>
+                                <strong>
+                                    View Wishlist
+                                </strong>
+
+                                <small>
+                                    See pieces you've saved
+                                </small>
+                            </span>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+
+                        <a
+                            href="contact.html"
+                            class="quick-action"
+                        >
+                            <i class="fa-regular fa-circle-question"></i>
+
+                            <span>
+                                <strong>
+                                    Need Help?
+                                </strong>
+
+                                <small>
+                                    Contact KIVO customer care
+                                </small>
+                            </span>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================
+                     PROFILE DETAILS
+                ================== -->
+
+                <section class="account-section" id="profile-details">
+                    <div class="section-heading">
+                        <div>
+                            <p class="content-eyebrow">
+                                PERSONAL INFORMATION
+                            </p>
+
+                            <h3>Profile details</h3>
+                        </div>
+
+                        <button type="button" class="edit-profile-btn">Edit</button>
+                    </div>
+
+
+                    <div class="profile-details-grid">
+
+                        <div class="profile-detail">
+                            <span>Full Name</span>
+
+                            <strong>
+                                Guest User
+                            </strong>
+                        </div>
+
+
+                        <div class="profile-detail">
+                            <span>
+                                Email
+                            </span>
+
+                            <strong>
+                                Not signed in
+                            </strong>
+                        </div>
+
+
+                        <div class="profile-detail">
+                            <span>
+                                Phone
+                            </span>
+
+                            <strong>
+                                Not provided
+                            </strong>
+                        </div>
+
+
+                        <div class="profile-detail">
+                            <span>
+                                Location
+                            </span>
+
+                            <strong>
+                                Not provided
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================
+                     SETTINGS
+                ================== -->
+
+                <section
+                    class="account-section"
+                    id="settings"
+                >
+
+                    <div class="section-heading">
+
+                        <div>
+                            <p class="content-eyebrow">
+                                PREFERENCES
+                            </p>
+
+                            <h3>
+                                Account settings
+                            </h3>
+                        </div>
+
+                    </div>
+
+
+                    <div class="settings-list">
+
+                        <button
+                            type="button"
+                            class="setting-item"
+                        >
+                            <span>
+                                <i class="fa-regular fa-envelope"></i>
+                            </span>
+
+                            <div>
+                                <strong>
+                                    Email Preferences
+                                </strong>
+
+                                <small>
+                                    Manage promotional emails and updates
+                                </small>
+                            </div>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="setting-item"
+                        >
+                            <span>
+                                <i class="fa-solid fa-lock"></i>
+                            </span>
+
+                            <div>
+                                <strong>
+                                    Privacy & Security
+                                </strong>
+
+                                <small>
+                                    Manage your account security
+                                </small>
+                            </div>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+
+
+                        <a
+                            href="contact.html"
+                            class="setting-item"
+                        >
+                            <span>
+                                <i class="fa-regular fa-circle-question"></i>
+                            </span>
+
+                            <div>
+                                <strong>
+                                    Help & Support
+                                </strong>
+
+                                <small>
+                                    Get help with your KIVO account
+                                </small>
+                            </div>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+        CART OVERLAY & DRAWER
+    ========================== -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+        <div class="cart-header">
+            <div>
+                <h2>Your Bag 🛍️</h2>
+                <span id="cartItemLabel">0 items</span>
+            </div>
+            <button type="button" id="closeCart" class="cart-close" aria-label="Close shopping bag">&times;</button>
+        </div>
+
+        <!-- CART CONTENT -->
+        <div class="cart-body" id="cartBody">
+
+            <!-- Dynamic cart items rendered by cart.js will go here -->
+
+            <!-- Empty State -->
+            <div class="cart-empty" id="cartEmpty">
+                <span class="empty-bag-icon">🛒</span>
+                <h3>Your bag is empty</h3>
+                <p>Looks like you haven't added anything to your cart yet.</p>
+                <a href="shop.html" class="cart-shop-btn">
+                    Continue Shopping ✨
+                </a>
+            </div>
+
+        </div>
+
+        <!-- CART FOOTER -->
+        <div class="cart-footer" id="cartFooter">
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <strong id="cartSubtotal">$0.00</strong>
+            </div>
+
+            <p class="cart-note">
+                Shipping and taxes calculated at checkout. 🚚
+            </p>
+
+            <button type="button" class="checkout-btn" id="checkoutBtn">
+                Proceed to Checkout
+            </button>
+
+            <button type="button" class="continue-shopping-btn" id="continueShopping">
+                Continue Shopping
+            </button>
+        </div>
+    </aside>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Our Studio — AURA & BLUSH</title>
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body id="about">
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-track" id="announcementTrack">
+            <span>FREE WORLDWIDE SHIPPING ON ORDERS OVER $50</span>
+            <span>NEW SEASON — NOW AVAILABLE</span>
+            <span>10% OFF YOUR FIRST ORDER</span>
+            <span>EASY RETURNS WITHIN 30 DAYS</span>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo">
+            <a href="index.html">KIVO</a>
+        </div>
+
+        <input type="checkbox" id="toggler">
+        
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="collection.html">Collections</a>
+            <a href="about.html" class="active">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <!-- Wishlist / Heart Icon -->
+            <a href="wishlist.html" class="icon-btn" aria-label="View Wishlist">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="#7A263A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+                <span class="badge" id="fav-count">0</span>
+            </a>
+
+            <!-- Shopping Bag Icon -->
+            <button class="icon-btn" id="open-cart" aria-label="View Shopping Cart">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="#7A263A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span class="badge" id="cart-count">0</span>
+            </button>
+
+            <!-- User Profile Icon -->
+            <a href="profile.html" class="icon-btn" id="open-profile" aria-label="View User Profile">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" stroke="#7A263A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </a>
+        </div>
+        <label for="toggler" class="fas fa-bars" aria-label="Toggle navigation menu"></label>
+    </header>
+
+    <!-- Main About Content Area -->
+    <main class="about-main">
+        
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <h1>OUR STORY</h1>
+            <p class="about-tagline">Designed between structure and spontaneity, KIVO creates pieces that move effortlessly between everyday life and special occasions.</p>
+        </section>
+
+        <!-- Brand Story Split Layout -->
+        <section class="about-section story-block">
+            <div class="about-text-content">
+                <span class="section-subtitle">The Studio Origins</span>
+                <h2>Rooted in Craft, Defined by Contrast</h2>
+                <p>Founded with a passion for tactile textures and quiet elegance, KIVO was born out of a desire to break away from mass-produced monotony. We approach garment and accessory creation as an ongoing dialogue between architectural silhouettes and soft, organic draping.</p>
+                <p>Every collection is thoughtfully curated to balance refined tailoring with an effortless sense of ease—giving you wardrobes that feel both intentional and entirely lived-in.</p>
+            </div>
+            <div class="about-img-container">
+                <img src="images/tailored_process.jpeg" alt="Tailored Studio Process">
+            </div>
+        </section>
+
+        <!-- Philosophy & Pillars Grid -->
+        <section class="about-section philosophy-block">
+            <div class="section-header-center reveal">
+                <span class="section-subtitle">Core Ethics</span>
+                <h2>Our Philosophy</h2>
+            </div>
+            <div class="philosophy-grid">
+                <div class="philosophy-card reveal">
+                    <i class="fa-solid fa-compass-drafting"></i>
+                    <h3>Intentional Design</h3>
+                    <p>We reject fleeting micro-trends in favor of enduring silhouettes. Each seam, fold, and finish is carefully considered to ensure long-lasting style.</p>
+                </div>
+                <div class="philosophy-card reveal-delay-1">
+                    <i class="fa-solid fa-feather"></i>
+                    <h3>Sensory Materials</h3>
+                    <p>Textile selection is at the heart of what we do. From breathable linens and structured wools to soft silks, our fabrics speak through touch.</p>
+                </div>
+                <div class="philosophy-card reveal-delay-2">
+                    <i class="fa-solid fa-seedling"></i>
+                    <h3>Conscious Creation</h3>
+                    <p>Sustainability isn’t an afterthought—it’s built into our small-batch production model, minimizing waste and honoring ethical studio standards.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Materials & Sustainability Spotlight -->
+        <section class="about-section sustainability-block">
+            <div class="about-img-container">
+                <img src="images/cardigan.jpg" alt="Sustainable Textiles">
+            </div>
+            <div class="about-text-content">
+                <span class="section-subtitle">Materials & Sustainability</span>
+                <h2>Crafted with Respect for Tomorrow</h2>
+                <p>We believe true luxury accounts for its footprint. That is why we partner with independent mills and artisans who prioritize responsible dye processes, organic fibers, and fair working environments.</p>
+                <p>By producing in intentional small batches, we ensure that surplus is minimized and every single piece finds a cherished home in your capsule wardrobe.</p>
+            </div>
+        </section>
+
+        <!-- Behind-The-Scenes Gallery -->
+        <section class="about-section bts-block">
+            <div class="section-header-center">
+                <span class="section-subtitle">Atelier Moments</span>
+                <h2>Behind the Scenes</h2>
+                <p>A glimpse into our workshop, where ideas transform into tangible textures.</p>
+            </div>
+            <div class="bts-gallery">
+                <div class="bts-item"><img src="images/images.jpeg" alt="Draping fabrics in studio"></div>
+                <div class="bts-item"><img src="images/assemble.jpeg" alt="Hand-assembled jewelry details"></div>
+                <div class="bts-item"><img src="images/sketch.jpeg" alt="Sketching new silhouettes"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================
+        CART OVERLAY & DRAWER
+    ========================== -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+        <div class="cart-header">
+            <div>
+                <h2>Your Bag 🛍️</h2>
+                <span id="cartItemLabel">0 items</span>
+            </div>
+            <button type="button" id="closeCart" class="cart-close" aria-label="Close shopping bag">&times;</button>
+        </div>
+
+        <!-- CART CONTENT -->
+        <div class="cart-body" id="cartBody">
+
+            <!-- Dynamic cart items rendered by cart.js will go here -->
+
+            <!-- Empty State -->
+            <div class="cart-empty" id="cartEmpty">
+                <span class="empty-bag-icon">🛒</span>
+                <h3>Your bag is empty</h3>
+                <p>Looks like you haven't added anything to your cart yet.</p>
+                <a href="shop.html" class="cart-shop-btn">
+                    Continue Shopping ✨
+                </a>
+            </div>
+
+        </div>
+
+        <!-- CART FOOTER -->
+        <div class="cart-footer" id="cartFooter">
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <strong id="cartSubtotal">$0.00</strong>
+            </div>
+
+            <p class="cart-note">
+                Shipping and taxes calculated at checkout. 🚚
+            </p>
+
+            <button type="button" class="checkout-btn" id="checkoutBtn">
+                Proceed to Checkout
+            </button>
+
+            <button type="button" class="continue-shopping-btn" id="continueShopping">
+                Continue Shopping
+            </button>
+        </div>
+    </aside>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>KIVO</h3>
+                <p>Your destination for signature artisan jewelry and chic independent fashion collections.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop Catalog</a>
+                <a href="collections.html">Collections</a>
+                <a href="about.html">About Brand</a>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Care</h4>
+                <a href="contact.html">Shipping & Returns</a>
+                <a href="contact.html">Size Guide</a>
+                <a href="contact.html">Track Order</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <p><i class="fa-solid fa-envelope"></i> support@kivofashion.com</p>
+                <p><i class="fa-solid fa-phone"></i> +1 (555) 382-9011</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/hazelworksng?utm_source=qr&igsh=MTEwMHdiNHZwM2lhMA==" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/message/XJLC6BAM5DPYN1" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/in/yetunde-undefined-35b78b425?utm_source=share_via&utm_content=profile&utm_medium=member_android" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 HAZEL. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- External Script Integration -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

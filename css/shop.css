@@ -1,0 +1,709 @@
+/* =========================================================
+   MAIN SHOP AREA
+========================================================= */
+
+.shop-main {
+    width: min(1400px, 100%);
+    margin: 0 auto;
+    padding: 40px 4%;
+    box-sizing: border-box;
+}
+
+.shop-header-banner {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.shop-header-banner h1 {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.shop-category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background: var(--burgundy);
+    border: 1px solid var(--border);
+    padding: 8px 22px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+    background-color: var(--primary);
+    color: var(--text);
+}
+
+.shop-divider {
+    border: none;
+    border-top: 1px solid var(--border-cream);
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   CATALOG CONTROLS
+========================================= */
+
+.catalog-controls-bar {
+    position: sticky;
+    top: 85px;
+    z-index: 50;
+    width: 100%;
+    min-height: 64px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+}
+
+
+/* =========================================
+   FILTER BUTTON
+========================================= */
+
+.filter-toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: var(--bg-cream);
+    color: var(--text);
+    border: 1px solid var(--border-cream);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.filter-toggle-btn svg {
+    width: 19px;
+    height: 19px;
+}
+
+.filter-toggle-btn:hover {
+    background-color: var(--border-cream);
+    border-color: var(--border);
+}
+
+.filter-toggle-btn:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.catalog-controls-bar > div:not(.filter-toggle-btn) {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: min(360px, 40%);
+    height: 42px;
+    padding: 0;
+    background: var(--white);
+    border: 1px solid var(--border-cream);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.catalog-controls-bar > div:not(.filter-toggle-btn) input {
+    width: 100%;
+    height: 100%;
+    padding: 0 48px 0 14px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.88rem;
+}
+
+.catalog-controls-bar > div:not(.filter-toggle-btn) input::placeholder {
+    color: #999;
+}
+
+.catalog-controls-bar > div:not(.filter-toggle-btn) svg {
+    position: absolute;
+    right: 10px;
+    width: 22px;
+    height: 22px;
+    pointer-events: none;
+}
+
+
+/* =========================================
+   SORTING
+========================================= */
+
+.sorting-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--text);
+    white-space: nowrap;
+}
+
+.sort-dropdown {
+    appearance: none;
+    min-width: 145px;
+    padding: 10px 34px 10px 12px;
+    border: 1px solid var(--border-cream);
+    border-radius: 8px;
+    background-color: var(--white);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.85rem;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sort-dropdown:hover {
+    border-color: var(--border);
+}
+
+.sort-dropdown:focus {
+    border-color: var(--text);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================================================
+   CATALOG LAYOUT
+========================================================= */
+
+.catalog-layout {
+    width: 100%;
+    min-width: 0;
+    display: block;
+}
+
+.catalog-grid-area {
+    width: 100%;
+    min-width: 0;
+}
+
+
+/* =========================================================
+   FILTER POPOVER
+========================================================= */
+
+#filtersSidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: min(340px, 90vw);
+    height: 100dvh;
+    margin: 0;
+    padding: 25px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background-color: var(--surface);
+    border: none;
+    border-right: 1px solid var(--border-cream);
+    border-radius: 0;
+    box-shadow: 8px 0 30px rgba(0, 0, 0, 0.08);
+    z-index: 2000;
+}
+
+/* =========================================================
+   FILTER HEADER
+========================================================= */
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-cream);
+}
+
+.sidebar-header h3 {
+    font-size: 1.05rem;
+}
+
+.close-filters-btn {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text);
+}
+
+
+/* =========================================================
+   FILTER GROUPS
+========================================================= */
+
+.filter-group {
+    margin-bottom: 25px;
+}
+
+.filter-group h4 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.filter-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   SIZE CHIPS
+========================================================= */
+
+.size-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.size-chip {
+    border: 1px solid var(--border-cream);
+    background-color: var(--white);
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.size-chip:hover,
+.size-chip.active {
+    background-color: var(--burgundy);
+    color: var(--white);
+    border-color: var(--burgundy);
+}
+
+
+/* =========================================================
+   COLOR DOTS
+========================================================= */
+
+.color-options {
+    display: flex;
+    gap: 10px;
+}
+
+.color-dot {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.color-dot.active {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 2px var(--primary-burgundy);
+}
+
+
+/* =========================================================
+   PRICE SLIDER
+========================================================= */
+
+.price-slider-container input[type="range"] {
+    width: 100%;
+
+    accent-color: var(--burgundy);
+
+    margin-bottom: 8px;
+}
+
+.price-values {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+
+/* =========================================================
+   APPLY FILTER BUTTON
+========================================================= */
+
+.apply-filters-btn {
+    width: 100%;
+    background-color: var(--burgundy);
+    color: var(--white);
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.apply-filters-btn:hover {
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   PRODUCT GRID
+========================================================= */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    width: 100%;
+    margin: 30px 0 60px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.product-card {
+    position: relative;
+    min-width: 0;
+    border: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition:
+        transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.product-img-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background: var(--bg, #F7F2EA);
+}
+
+.product-img-wrapper img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:
+        transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card:hover .product-img-wrapper img {
+    transform: scale(1.045);
+}
+
+
+/* =========================
+   BADGE
+========================= */
+
+.product-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 5;
+
+    padding: 6px 10px;
+
+    background: var(--burgundy, #7A263A);
+    color: #fff;
+
+    font-size: 0.65rem;
+    font-weight: 400;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    border-radius: 2px;
+}
+
+.product-badge.best {
+    background: #556B2F;
+}
+
+.product-badge.hot {
+    background: #A83232;
+}
+
+
+/* =========================
+   PRODUCT INFO
+========================= */
+
+.product-info {
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    bottom: 0;
+}
+
+.product-info h4 {
+    font-size: .7rem;
+    font-weight: lighter;
+}
+
+/* Category */
+
+.product-cat {
+    margin: 0;
+    color: var(--muted, #77736D);
+    font-size: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+
+/* Product name */
+
+.product-title {
+    margin: 0;
+    color: var(--text, #171717);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    /* Keep cards from becoming different heights */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: color 0.25s ease;
+}
+
+.product-card:hover .product-title {
+    color: var(--burgundy, #7A263A);
+}
+
+
+/* =========================
+   PRICE + ADD BUTTON
+========================= */
+
+.product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.product-price {
+    color: var(--burgundy, #7A263A);
+    font-size: 0.9rem;
+}
+
+/* =========================================================
+   WISHLIST BUTTON
+========================================================= */
+
+.heart-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: var(--transition);
+}
+
+.heart-btn:hover {
+    color: var(--accent-red);
+}
+
+
+/* =========================================================
+   ADD BUTTON
+========================================================= */
+
+.add-btn {
+    background-color: var(--burgundy);
+    color: var(--white);
+    border: none;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.add-btn:hover {
+    background-color: var(--burgundy);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.empty-msg {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 50px;
+    color: #777;
+    font-size: 1rem;
+}
+
+.view-all-btn {
+    display: block;
+    margin: 2.5rem auto 1rem;
+    padding: 12px 28px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--white);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.view-all-btn:hover {
+    background: var(--text);
+    color: var(--white);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .shop-main {
+        padding: 30px 4%;
+    }
+
+    .catalog-controls-bar {
+        top: 75px;
+    }
+
+    .product-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .shop-main {
+        padding: 25px 3%;
+    }
+
+    .catalog-controls-bar {
+        top: 65px;
+
+        min-height: 60px;
+
+        padding: 0.75rem 0;
+    }
+
+    .filter-toggle-btn {
+        padding: 8px 14px;
+    }
+
+    .sorting-container {
+        gap: 5px;
+    }
+
+    .sort-dropdown {
+        padding: 7px 8px;
+        font-size: 0.8rem;
+    }
+
+    .product-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+        gap: 0.8rem;
+    }
+
+    #filtersSidebar {
+        width: min(340px, 90vw);
+    }
+}
+
+
+@media (max-width: 1100px) {
+
+    .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px 12px;
+    }
+
+    .product-info {
+        padding-top: 10px;
+    }
+
+    .product-title {
+        font-size: 0.85rem;
+    }
+
+    .product-cat {
+        font-size: 0.6rem;
+    }
+
+    .product-price {
+        font-size: 0.85rem;
+    }
+
+    .product-add-btn {
+        padding: 6px 9px;
+        font-size: 0.65rem;
+    }
+
+}

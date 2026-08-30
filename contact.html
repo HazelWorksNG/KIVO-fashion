@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Studio Support — KIVO</title>
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body id="contact">
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-track" id="announcementTrack">
+            <span>FREE WORLDWIDE SHIPPING ON ORDERS OVER $50</span>
+            <span>NEW SEASON — NOW AVAILABLE</span>
+            <span>10% OFF YOUR FIRST ORDER</span>
+            <span>EASY RETURNS WITHIN 30 DAYS</span>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo">
+            <a href="index.html">KIVO</a>
+        </div>
+
+        <input type="checkbox" id="toggler">
+        
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="collection.html">Collections</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <!-- Wishlist / Heart Icon -->
+            <a href="wishlist.html" class="icon-btn" aria-label="View Wishlist">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="#7A263A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+                <span class="badge" id="fav-count">0</span>
+            </a>
+
+            <!-- Shopping Bag Icon -->
+            <button class="icon-btn" id="open-cart" aria-label="View Shopping Cart">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="#7A263A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span class="badge" id="cart-count">0</span>
+            </button>
+
+            <!-- User Profile Icon -->
+            <a href="profile.html" class="icon-btn" id="open-profile" aria-label="View User Profile">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" stroke="#7A263A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </a>
+        </div>
+        <label for="toggler" class="fas fa-bars" aria-label="Toggle navigation menu"></label>
+    </header>
+
+    <!-- Main Contact Area -->
+    <main class="contact-main">
+        
+        <div class="contact-header">
+            <h1>GET IN TOUCH</h1>
+            <p>Have a question about sizing, custom inquiries, or studio orders? We would love to hear from you.</p>
+        </div>
+
+        <div class="contact-grid">
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <h2>Send Us a Message</h2>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email5" id="email" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" class="form-select">
+                            <option value="order">Order Inquiry & Tracking</option>
+                            <option value="sizing">Size & Fit Guidance</option>
+                            <option value="custom">Custom Atelier Request</option>
+                            <option value="other">General Support</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="How can we assist you today?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary-action">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Studio Info & Details -->
+            <div class="contact-info-wrapper">
+                <h2>Studio & Support</h2>
+                <p class="info-intro">Our customer care and atelier team operate Monday through Friday. We strive to respond to all inquiries within 24 hours.</p>
+
+                <div class="info-list">
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Atelier Location</h4>
+                            <p>42 Atelier Row, Suite 3B<br>New York, NY 10012</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>support@kivofashion.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>Call Studio</h4>
+                            <p>+1 (555) 382-9011</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <h4>Hours of Operation</h4>
+                            <p>Monday – Friday: 9:00 AM – 6:00 PM EST<br>Saturday – Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- =========================
+        CART OVERLAY & DRAWER
+    ========================== -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+        <div class="cart-header">
+            <div>
+                <h2>Your Bag 🛍️</h2>
+                <span id="cartItemLabel">0 items</span>
+            </div>
+            <button type="button" id="closeCart" class="cart-close" aria-label="Close shopping bag">&times;</button>
+        </div>
+
+        <!-- CART CONTENT -->
+        <div class="cart-body" id="cartBody">
+
+            <!-- Dynamic cart items rendered by cart.js will go here -->
+
+            <!-- Empty State -->
+            <div class="cart-empty" id="cartEmpty">
+                <span class="empty-bag-icon">🛒</span>
+                <h3>Your bag is empty</h3>
+                <p>Looks like you haven't added anything to your cart yet.</p>
+                <a href="shop.html" class="cart-shop-btn">
+                    Continue Shopping ✨
+                </a>
+            </div>
+
+        </div>
+
+        <!-- CART FOOTER -->
+        <div class="cart-footer" id="cartFooter">
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <strong id="cartSubtotal">$0.00</strong>
+            </div>
+
+            <p class="cart-note">
+                Shipping and taxes calculated at checkout. 🚚
+            </p>
+
+            <button type="button" class="checkout-btn" id="checkoutBtn">
+                Proceed to Checkout
+            </button>
+
+            <button type="button" class="continue-shopping-btn" id="continueShopping">
+                Continue Shopping
+            </button>
+        </div>
+    </aside>
+
+    <!-- Footer Section -->
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>KIVO</h3>
+                <p>Your destination for signature artisan jewelry and chic independent fashion collections.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop Catalog</a>
+                <a href="collections.html">Collections</a>
+                <a href="about.html">About Brand</a>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Care</h4>
+                <a href="contact.html">Shipping & Returns</a>
+                <a href="contact.html">Size Guide</a>
+                <a href="contact.html">Track Order</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <p><i class="fa-solid fa-envelope"></i> support@kivofashion.com</p>
+                <p><i class="fa-solid fa-phone"></i> +1 (555) 382-9011</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/hazelworksng?utm_source=qr&igsh=MTEwMHdiNHZwM2lhMA==" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/message/XJLC6BAM5DPYN1" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/in/yetunde-undefined-35b78b425?utm_source=share_via&utm_content=profile&utm_medium=member_android" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 HAZEL. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/products.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/function.js"></script>
+    <script src="js/index.js"></script>
+    <!-- Contact Script -->
+    <script>
+        // Profile Drawer Toggles
+        const profileDrawer = document.getElementById('profileDrawer');
+        document.getElementById('open-profile').addEventListener('click', () => profileDrawer.classList.add('open'));
+        document.getElementById('close-profile').addEventListener('click', () => profileDrawer.classList.remove('open'));
+
+        // Form Submission Simulation
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for reaching out! Your message has been sent to the AURA & BLUSH atelier team.');
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>

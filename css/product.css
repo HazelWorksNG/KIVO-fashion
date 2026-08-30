@@ -1,0 +1,255 @@
+/* ==========================================
+   KIVO — PRODUCT PAGE
+========================================== */
+
+.product-page {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   PRODUCT DETAIL LAYOUT
+========================================== */
+
+.product-detail {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(350px, 0.85fr);
+    gap: 5rem;
+    align-items: start;
+}
+
+
+/* ==========================================
+   PRODUCT IMAGE
+========================================== */
+
+.product-detail-image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: var(--bg-cream);
+}
+
+.product-detail-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-detail-image:hover img {
+    transform: scale(1.025);
+}
+
+
+/* ==========================================
+   PRODUCT INFORMATION
+========================================== */
+
+.product-detail-info {
+    position: sticky;
+    top: 110px;
+    padding-top: 1rem;
+}
+
+.product-detail-category {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.product-detail-info h1 {
+    margin: 0;
+    max-width: 600px;
+    color: var(--text);
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+}
+
+.product-detail-price {
+    margin: 1.5rem 0 2rem;
+    color: var(--text);
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.product-detail-description {
+    max-width: 520px;
+    margin: 0 0 2.5rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   QUANTITY
+========================================== */
+
+.product-actions {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border);
+}
+
+.quantity-btn {
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: transparent;
+    color: var(--text);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.quantity-btn:hover {
+    background: var(--bg-cream);
+}
+
+#quantity {
+    min-width: 42px;
+    text-align: center;
+    color: var(--text);
+    font-size: 0.9rem;
+}
+
+
+/* ==========================================
+   ADD TO CART
+========================================== */
+
+.add-to-cart-detail {
+    width: 100%;
+    max-width: 520px;
+    padding: 16px 24px;
+    background: var(--burgundy);
+    color: var(--white);
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.add-to-cart-detail:hover {
+    background: transparent;
+    color: var(--burgundy);
+    border: 1px solid var(--burgundy);
+}
+
+
+/* ==========================================
+   PRODUCT NOT FOUND
+========================================== */
+
+.product-not-found {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.product-not-found h1 {
+    margin-bottom: 0.75rem;
+    font-size: 2rem;
+}
+
+.product-not-found p {
+    margin-bottom: 1.5rem;
+    color: var(--muted);
+}
+
+.product-not-found a {
+    padding: 12px 24px;
+
+    background: var(--text);
+    color: var(--white);
+
+    text-decoration: none;
+}
+
+.return-btn{
+    margin-bottom: .5rem;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+
+    .product-page {
+        padding: 3rem 1.5rem 5rem;
+    }
+
+    .product-detail {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .product-detail-info {
+        position: static;
+        padding-top: 0;
+    }
+
+    .product-detail-info h1 {
+        font-size: clamp(2rem, 7vw, 3rem);
+    }
+
+    .add-to-cart-detail {
+        max-width: none;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .product-page {
+        padding: 2rem 1rem 4rem;
+    }
+
+    .product-detail {
+        gap: 2rem;
+    }
+
+    .product-detail-image img {
+        aspect-ratio: 3 / 4;
+    }
+
+    .product-detail-category {
+        margin-bottom: 0.75rem;
+    }
+
+    .product-detail-info h1 {
+        font-size: 2rem;
+    }
+
+    .product-detail-price {
+        margin: 1rem 0 1.5rem;
+    }
+
+    .product-detail-description {
+        margin-bottom: 2rem;
+        font-size: 0.9rem;
+    }
+}

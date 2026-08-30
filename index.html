@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIVO | Independent Fashion & Accessories</title>
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="home">
+
+    <div class="announcement-bar">
+        <div class="announcement-track" id="announcementTrack">
+            <span>FREE WORLDWIDE SHIPPING ON ORDERS OVER $50</span>
+            <span>NEW SEASON — NOW AVAILABLE</span>
+            <span>10% OFF YOUR FIRST ORDER</span>
+            <span>EASY RETURNS WITHIN 30 DAYS</span>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo">
+            <a href="index.html">KIVO</a>
+        </div>
+
+        <input type="checkbox" id="toggler">
+        <nav class="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="collection.html">Collections</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <!-- Wishlist / Heart Icon -->
+            <a href="wishlist.html" class="icon-btn" aria-label="View Wishlist">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="#7A263A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+                <span class="badge" id="fav-count">0</span>
+            </a>
+
+            <!-- Shopping Bag Icon -->
+            <button class="icon-btn" id="open-cart" aria-label="View Shopping Cart">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="#7A263A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span class="badge" id="cart-count">0</span>
+            </button>
+
+            <!-- User Profile Icon -->
+            <a href="profile.html" class="icon-btn" id="open-profile" aria-label="View User Profile">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" stroke="#7A263A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </a>
+        </div>
+
+        <label for="toggler" class="fas fa-bars" aria-label="Toggle navigation menu"></label>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="home-main">
+        
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <span class="hero-subtitle reveal">NEW SEASON</span>
+                <h1 class="reveal reveal-delay-1">
+                    Designed for the way you move.
+                </h1>
+                <p class="reveal reveal-delay-2">
+                    Discover signature fashion collections crafted with minimalist elegance.
+                </p>
+
+                <div class="hero-cta reveal reveal-delay-3">
+                    <a href="shop.html?cat=women" class="btn-primary-action">SHOP WOMEN</a>
+                    <a href="shop.html?cat=men" class="btn-secondary-action">SHOP MEN</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Arrivals Section -->
+        <section class="home-section">
+            <div class="section-title">
+                <h2>New Arrivals</h2>
+                <p>Fresh additions just landed in the studio</p>
+            </div>
+            <div class="product-grid" id="newArrivalsGrid">
+                <!-- Rendered dynamically via JS -->
+            </div>
+        </section>
+
+        <!-- Featured Collection Section -->
+        <section class="home-section featured-banner-section reveal-image">
+            <div class="featured-content">
+                <span class="hero-subtitle reveal">
+                    CURATED EDIT
+                </span>
+
+                <h2 class="reveal reveal-delay-1">
+                    The Minimalist Solopreneur Collection
+                </h2>
+
+                <p class="reveal reveal-delay-2">
+                    Meticulously hand-assembled pieces designed to transition effortlessly
+                    from daylight studio sessions to evening affairs.
+                </p>
+
+                <a href="collections.html"
+                class="btn-primary-action reveal reveal-delay-3">
+                    Explore Collections
+                </a>
+            </div>
+        </section>
+
+        <!-- Best Sellers Section -->
+        <section class="home-section">
+            <div class="section-title">
+                <h2>Best Sellers</h2>
+                <p>The community favorites you can't stop wearing</p>
+            </div>
+            <div class="product-grid" id="bestSellersGrid">
+                <!-- Rendered dynamically via JS -->
+            </div>
+        </section>
+
+        <!-- Brand Story Snippet -->
+        <section class="about-snippet-section">
+            <div class="about-container">
+
+                <img src="images/atelier.jpeg" alt="KIVO studio" class="reveal-image">
+
+                <div class="about-text">
+                    <h2 class="reveal">
+                        Rooted in Craftsmanship
+                    </h2>
+
+                    <p class="reveal reveal-delay-1">
+                        KIVO was born from a passion for thoughtful design,
+                        understated fashion, and enduring quality.
+                    </p>
+
+                    <a href="about.html" class="read-more-link reveal reveal-delay-2">
+                        Read Our Story →
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Newsletter Signup Section -->
+        <section class="newsletter-section">
+            <div class="section-title">
+                <h2>JOIN KIVO</h2>
+                <p>Subscribe to get first access to private drops, styling guides, and studio notes.</p>
+            </div>
+            <form id="newsletterForm" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                <input type="email" placeholder="Enter your email address..." required>
+                <button type="submit" class="btn-primary-action">JOIN</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- =========================
+        CART OVERLAY & DRAWER
+    ========================== -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+        <div class="cart-header">
+            <div>
+                <h2>Your Bag 🛍️</h2>
+                <span id="cartItemLabel">0 items</span>
+            </div>
+            <button type="button" id="closeCart" class="cart-close" aria-label="Close shopping bag">&times;</button>
+        </div>
+
+        <!-- CART CONTENT -->
+        <div class="cart-body" id="cartBody">
+
+            <!-- Dynamic cart items rendered by cart.js will go here -->
+
+            <!-- Empty State -->
+            <div class="cart-empty" id="cartEmpty">
+                <span class="empty-bag-icon">🛒</span>
+                <h3>Your bag is empty</h3>
+                <p>Looks like you haven't added anything to your cart yet.</p>
+                <a href="shop.html" class="cart-shop-btn">
+                    Continue Shopping ✨
+                </a>
+            </div>
+
+        </div>
+
+        <!-- CART FOOTER -->
+        <div class="cart-footer" id="cartFooter">
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <strong id="cartSubtotal">$0.00</strong>
+            </div>
+
+            <p class="cart-note">
+                Shipping and taxes calculated at checkout. 🚚
+            </p>
+
+            <button type="button" class="checkout-btn" id="checkoutBtn">
+                Proceed to Checkout
+            </button>
+
+            <button type="button" class="continue-shopping-btn" id="continueShopping">
+                Continue Shopping
+            </button>
+        </div>
+    </aside>
+   <!-- Footer Section -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>KIVO</h3>
+                <p>Your destination for signature artisan jewelry and chic independent fashion collections.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop Catalog</a>
+                <a href="collections.html">Collections</a>
+                <a href="about.html">About Brand</a>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Care</h4>
+                <a href="contact.html">Shipping & Returns</a>
+                <a href="contact.html">Size Guide</a>
+                <a href="contact.html">Track Order</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <p><i class="fa-solid fa-envelope"></i> support@kivofashion.com</p>
+                <p><i class="fa-solid fa-phone"></i> +1 (555) 382-9011</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/hazelworksng?utm_source=qr&igsh=MTEwMHdiNHZwM2lhMA==" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/message/XJLC6BAM5DPYN1" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/in/yetunde-undefined-35b78b425?utm_source=share_via&utm_content=profile&utm_medium=member_android" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 HAZEL. All Rights Reserved.</p>
+        </div>
+    </footer>
+<script src="js/products.js"></script>
+<script src="js/wishlist.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/function.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

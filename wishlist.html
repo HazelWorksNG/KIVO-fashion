@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wishlist | KIVO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="css/wishlist.css">
+</head>
+
+<body id="wishlist">
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-track" id="announcementTrack">
+            <span>FREE WORLDWIDE SHIPPING ON ORDERS OVER $50</span>
+            <span>NEW SEASON — NOW AVAILABLE</span>
+            <span>10% OFF YOUR FIRST ORDER</span>
+            <span>EASY RETURNS WITHIN 30 DAYS</span>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo">
+            <a href="index.html">KIVO</a>
+        </div>
+
+        <input type="checkbox" id="toggler">
+        
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="shop.html" class="active">Shop</a>
+            <a href="collection.html">Collections</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <!-- Wishlist / Heart Icon -->
+            <a href="wishlist.html" class="icon-btn" aria-label="View Wishlist">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="#7A263A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+                <span class="badge" id="fav-count">0</span>
+            </a>
+
+            <!-- Shopping Bag Icon -->
+            <button class="icon-btn" id="open-cart" aria-label="View Shopping Cart">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="#7A263A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span class="badge" id="cart-count">0</span>
+            </button>
+
+            <!-- User Profile Icon -->
+            <a href="profile.html" class="icon-btn" id="open-profile" aria-label="View User Profile">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" stroke="#7A263A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </a>
+        </div>
+        <label for="toggler" class="fas fa-bars" aria-label="Toggle navigation menu"></label>
+    </header>
+
+    <!-- =========================
+         MAIN WISHLIST
+    ========================== -->
+
+    <main class="wishlist-main">
+
+        <!-- Page heading -->
+        <section class="wishlist-heading">
+
+            <p class="wishlist-eyebrow">
+                YOUR SAVED COLLECTION
+            </p>
+            <h1>
+                My Wishlist
+            </h1>
+            <p class="wishlist-subtitle">
+                Pieces you've saved for later.
+            </p>
+        </section>
+
+        <!-- Wishlist controls -->
+
+        <section class="wishlist-toolbar">
+            <p id="wishlistCount">
+                0 items
+            </p>
+            <a href="shop.html" class="continue-shopping">
+                Continue Shopping
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </section>
+
+
+        <!-- =========================
+             EMPTY STATE
+        ========================== -->
+
+        <section class="wishlist-empty" id="wishlistEmpty" hidden>
+            <div class="empty-heart">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+            <h2>
+                Your wishlist is empty
+            </h2>
+            <p>
+                Save pieces you love and come back to them
+                whenever you're ready.
+            </p>
+            <a href="shop.html" class="wishlist-shop-btn">
+                Explore KIVO
+            </a>
+        </section>
+
+        <!-- =========================
+             WISHLIST PRODUCTS
+        ========================== -->
+
+        <section class="wishlist-products" id="wishlistProducts" aria-label="Saved products">
+            <!--
+                Products will be rendered here
+                by wishlist.js
+            -->
+        </section>
+    </main>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+
+        <div class="cart-header">
+            <div>
+                <h2>Your Bag</h2>
+                <span id="cartItemLabel">0 items</span>
+            </div>
+
+            <button
+                type="button"
+                id="closeCart"
+                class="cart-close"
+                aria-label="Close shopping bag"
+            >
+                &times;
+            </button>
+        </div>
+
+        <div class="cart-body" id="cartBody">
+
+            <div class="cart-empty" id="cartEmpty">
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <h3>Your bag is empty</h3>
+
+                <p>
+                    Looks like you haven't added anything yet.
+                </p>
+
+                <a href="shop.html" class="cart-shop-btn">
+                    Continue Shopping
+                </a>
+            </div>
+
+        </div>
+
+        <div class="cart-footer" id="cartFooter">
+
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <strong id="cartSubtotal">$0.00</strong>
+            </div>
+
+            <p class="cart-note">
+                Shipping and taxes calculated at checkout.
+            </p>
+
+            <button
+                type="button"
+                class="checkout-btn"
+                id="checkoutBtn"
+            >
+                Checkout
+            </button>
+
+            <button
+                type="button"
+                class="continue-shopping-btn"
+                id="continueShopping"
+            >
+                Continue Shopping
+            </button>
+
+        </div>
+
+    </aside>
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+    <script src="js/products.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/function.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
