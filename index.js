@@ -1,40 +1,71 @@
-/* ==========================================   KIVO — SCROLL REVEAL + STAGGER========================================== */
+/* ==========================================
+   KIVO — SCROLL REVEAL + STAGGER
+========================================== */
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const revealElements = document.querySelectorAll(
         '.reveal, .reveal-image, .reveal-card'
     );
 
-    if (!revealElements.length) return;
+    console.log('KIVO reveal elements:', revealElements.length);
 
-    console.log('Reveal elements found:', revealElements.length);
+    if (!revealElements.length) {
+        return;
+    }
+
+    // If browser doesn't support IntersectionObserver,
+    // don't leave the entire page invisible.
+    if (!('IntersectionObserver' in window)) {
+        revealElements.forEach(element => {
+            element.classList.add('visible');
+        });
+
+        return;
+    }
 
     const observer = new IntersectionObserver(
         (entries, observer) => {
 
             entries.forEach(entry => {
 
-                if (!entry.isIntersecting) return;
+                if (!entry.isIntersecting) {
+                    return;
+                }
 
                 const element = entry.target;
 
-                // Handle staggered animations for cards
+                // Stagger cards
                 if (element.classList.contains('reveal-card')) {
-                    const cards = [
-                        ...element.parentElement.querySelectorAll('.reveal-card')
-                    ];
-                    const index = cards.indexOf(element);
 
-                    element.style.setProperty(
-                        '--stagger-delay',
-                        `${index * 100}ms`
-                    );
+                    const parent = element.parentElement;
+
+                    if (parent) {
+
+                        const cards = [
+                            ...parent.querySelectorAll('.reveal-card')
+                        ];
+
+                        const index = cards.indexOf(element);
+
+                        element.style.setProperty(
+                            '--stagger-delay',
+                            `${index * 100}ms`
+                        );
+                    }
                 }
 
+                // Trigger animation
                 element.classList.add('visible');
+
+                console.log(
+                    'KIVO reveal activated:',
+                    element
+                );
+
+                // We only need to reveal it once
                 observer.unobserve(element);
             });
-
         },
         {
             threshold: 0.05,
